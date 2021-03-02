@@ -1,2 +1,3 @@
-<app-to-pay [paymentList]="paymentList"></app-to-pay>
+<app-to-pay [paymentList]="paymentList" (buttonPaidoutPressed)="paidOut($event)"></app-to-pay>
+<app-payment-form (buttonRegisterPressed)="addPayment($event)"></app-payment-form>
 

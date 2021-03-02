@@ -4,6 +4,7 @@
             <label>Bill Tittle: </label>{{payment.billTitle}}<br>
             <label>Bill Value: </label>{{payment.value}}<br>
             <label>Due Date: </label>{{payment.dueDate}}
+            <button (click)="paidout(payment)">paidout</button>
         </li>
     </ol>
 </div>

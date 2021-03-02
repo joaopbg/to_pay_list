@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainComponent } from './main/main.component';
 import { ToPayComponent } from './to-pay/to-pay.component';
+import { PaymentFormComponent } from './payment-form/payment-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
-    ToPayComponent
+    ToPayComponent,
+    PaymentFormComponent
   ],
   imports: [
     BrowserModule,

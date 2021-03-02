@@ -20,16 +20,12 @@ export class MainComponent implements OnInit {
     dueDate:"overdue"
   }]
 
-  public testVar = "fuck you JS"
-  
-
-  private addPayment(payment){
+  public addPayment(payment){
     this.paymentList.push(payment)
   }
 
-  private paidOut(paidOut){
-    // this.paymentList.filter(bill => bill.billTitle != paidOut.billTitle)
-
+  public paidOut(paidOut){
+    this.paymentList = this.paymentList.filter(paymentList => paymentList.billTitle != paidOut.billTitle)
   }
 
 }

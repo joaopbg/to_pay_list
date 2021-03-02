@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output , EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-to-pay',
@@ -8,12 +8,19 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ToPayComponent implements OnInit {
 
   @Input("paymentList") paymentList: object
-  @Input("testVar") testVar:string
+  @Output() buttonPaidoutPressed = new EventEmitter<object>()
+
+
+
 
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.testVar)
+  }
+
+  public paidout(payment){
+    this.buttonPaidoutPressed.emit(payment)
+
   }
 
   
