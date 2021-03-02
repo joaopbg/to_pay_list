@@ -10,8 +10,6 @@ export class MainComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    
-    
   }
 
   public paymentList = [{
@@ -21,11 +19,22 @@ export class MainComponent implements OnInit {
   }]
 
   public addPayment(payment){
+  
     this.paymentList.push(payment)
   }
 
   public paidOut(paidOut){
     this.paymentList = this.paymentList.filter(paymentList => paymentList.billTitle != paidOut.billTitle)
   }
+
+  public checkDuplicatedRegisters(payment){
+    
+  }
+
+  public checkEmptyData(payment){
+
+  }
+
+  
 
 }
