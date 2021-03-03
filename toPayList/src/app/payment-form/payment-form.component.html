@@ -1,7 +1,10 @@
-<div>
-    <input placeholder="bill tittle" [(ngModel)]="billTitle">
-    <input placeholder="value" [(ngModel)]="value">
-    <input placeholder="Due Date" [(ngModel)]="dueDate">
+<div class="card-background">
+    <mat-label>Bill Tittle</mat-label>
+    <input placeholder="bill tittle" [(ngModel)]="billTitle"><br>
+    <mat-label>Value</mat-label>
+    <input type="number" placeholder="value" [(ngModel)]="value"><br>
+    <mat-label>Due Date</mat-label>
+    <input type="date" placeholder="Due Date" [(ngModel)]="dueDate">
     <button (click)="addPayment()">Register</button>
 </div>
 

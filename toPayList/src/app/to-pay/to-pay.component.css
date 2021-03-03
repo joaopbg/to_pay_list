@@ -1,0 +1,6 @@
+.card-background{
+    border: 3px;
+    border-radius: 2%;
+    background-color: rgba(139, 198, 206, 0.527);
+    padding:9px 9px 9px 9px;
+}

@@ -14,8 +14,8 @@ export class MainComponent implements OnInit {
 
   public paymentList = [{
     billTitle:"Credit Card",
-    value:"R$ 900000,00",
-    dueDate:"overdue"
+    value:"R$513,23",
+    dueDate:"2021-26-03"
   }]
 
   public addPayment(payment){
@@ -27,15 +27,6 @@ export class MainComponent implements OnInit {
     this.paymentList = this.paymentList.filter(paymentList => paymentList.billTitle != paidOut.billTitle)
   }
 
-  public isDuplicatedRegister(payment){
-    let obj = this.paymentList.filter(paymentList => paymentList.billTitle == payment.billTitle)
-    if(obj.length >= 1){
-      return true   
-    }else return false
-    
-  }
-
-
   public isEmptyData(payment){
     if(payment.billTitle == null || payment.billTitle == " "){
       alert("Bill Title is empty, please set a name to this payment")
@@ -44,7 +35,14 @@ export class MainComponent implements OnInit {
       alert("Bill already registred, please check bill title again")
         return true
     }else return false
+  }
 
+  public isDuplicatedRegister(payment){
+    let obj = this.paymentList.filter(paymentList => paymentList.billTitle == payment.billTitle)
+    if(obj.length >= 1){
+      return true   
+    }else return false
+    
   }
 
   

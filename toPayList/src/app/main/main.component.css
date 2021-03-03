@@ -1,4 +1,38 @@
-.card-background{
-    align-items: center;
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1080px;
+
+    margin-right: auto;
+    margin-left: auto;
+
+    max-width: 1080px;
+
+    padding-right: 10px;
+    padding-left: 10px;
     background-color: gray;
 }
+
+.wrapper .wrapper-header{
+    display: grid;
+    grid-template-columns: 960;
+    text-align: center;
+    font-size: 25px;
+    
+}
+
+.wrapper .wrapper-content{
+    display: grid;
+    grid-template-columns: 250px 800px;
+
+}
+
+.wrapper .wrapper-content .wrapper-container{
+    display: grid;
+    grid-template-columns: 350px 350px 350px;
+    background-color: rgba(235, 235, 235, 0.568);
+    border: 1;
+    border-radius: 2%;
+
+}
+

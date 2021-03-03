@@ -1,10 +1,10 @@
 <div>
-    <ol *ngFor="let payment of paymentList">
-        <li>
+    <div *ngFor="let payment of paymentList">
+        <div class="card-background">
             <label>Bill Tittle: </label>{{payment.billTitle}}<br>
             <label>Bill Value: </label>{{payment.value}}<br>
             <label>Due Date: </label>{{payment.dueDate}}
-            <button (click)="paidout(payment)">paidout</button>
-        </li>
-    </ol>
+            <button (click)="paidout(payment)" mat-raised-button color="primary"> Paidout!</button>
+        </div>
+    </div>
 </div>

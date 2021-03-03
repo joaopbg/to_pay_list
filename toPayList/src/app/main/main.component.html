@@ -1,9 +1,21 @@
-<div class="card-background">
-    <app-to-pay [paymentList]="paymentList" (buttonPaidoutPressed)="paidOut($event)"></app-to-pay>
+<div class="wrapper">
+    <div class="wrapper-header">
+        <h1>To Pay List</h1>
+    </div>
+
+    <div class="wrapper-content">
+        <div>
+            <app-payment-form (buttonRegisterPressed)="addPayment($event)"></app-payment-form>
+            
+        </div>
+        <div class="wrapper-container">
+            <app-to-pay [paymentList]="paymentList" (buttonPaidoutPressed)="paidOut($event)"></app-to-pay>
+        </div>
+
+    </div>
+    
 </div>
-<div class="card-background">
-    <app-payment-form (buttonRegisterPressed)="addPayment($event)"></app-payment-form>
-</div>
+
     
 
 
