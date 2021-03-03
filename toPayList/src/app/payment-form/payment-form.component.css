@@ -1,8 +1,12 @@
 .card-background{
-    display: grid;
-    grid-template-columns: auto;
-    border: 1px solid rgb(162, 69, 224);
-    border-radius: 7%;
-    background-color: rgb(162, 69, 224);
     padding: 5px 5px 5px 5px;
+    display: grid;
+    grid-template-rows: auto;
+
+
+}
+
+#register-button{
+    
+
 }

@@ -1,6 +1,25 @@
 .card-background{
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+
+
+    border: 5px;
+    border-radius: 2%;
+    padding:9px 9px 9px 9px;
+
+    width: auto;
+    height: auto;
+
+  
+}
+
+
+.bill-card{
     border: 3px;
     border-radius: 2%;
-    background-color: rgba(139, 198, 206, 0.527);
-    padding:9px 9px 9px 9px;
+    background: linear-gradient(rgba(195, 0, 255, 0.589), rgba(192, 174, 174, 0.466));
+    padding: 9px 9px 9px 9px;
+
 }

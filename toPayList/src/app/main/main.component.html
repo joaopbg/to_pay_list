@@ -1,19 +1,18 @@
-<div class="wrapper">
-    <div class="wrapper-header">
+<div class="container">
+    <div class="container-header">
         <h1>To Pay List</h1>
     </div>
 
-    <div class="wrapper-content">
-        <div>
+    <div class="container-content">
+        <div class="register-data">
             <app-payment-form (buttonRegisterPressed)="addPayment($event)"></app-payment-form>
             
         </div>
-        <div class="wrapper-container">
+        <div>
             <app-to-pay [paymentList]="paymentList" (buttonPaidoutPressed)="paidOut($event)"></app-to-pay>
         </div>
 
     </div>
-    
 </div>
 
     
