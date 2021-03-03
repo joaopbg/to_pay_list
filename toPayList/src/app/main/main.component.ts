@@ -28,7 +28,7 @@ export class MainComponent implements OnInit {
   }
 
   public isEmptyData(payment){
-    if(payment.billTitle == null || payment.billTitle == " "){
+    if(payment.billTitle == null || payment.billTitle == ""){
       alert("Bill Title is empty, please set a name to this payment")
       return true      
     }else if(this.isDuplicatedRegister(payment)){
