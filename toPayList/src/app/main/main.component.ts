@@ -19,19 +19,31 @@ export class MainComponent implements OnInit {
   }]
 
   public addPayment(payment){
-  
-    this.paymentList.push(payment)
+    if(this.isEmptyData(payment)){}
+    else this.paymentList.push(payment)
   }
 
   public paidOut(paidOut){
     this.paymentList = this.paymentList.filter(paymentList => paymentList.billTitle != paidOut.billTitle)
   }
 
-  public checkDuplicatedRegisters(payment){
+  public isDuplicatedRegister(payment){
+    let obj = this.paymentList.filter(paymentList => paymentList.billTitle == payment.billTitle)
+    if(obj.length >= 1){
+      return true   
+    }else return false
     
   }
 
-  public checkEmptyData(payment){
+
+  public isEmptyData(payment){
+    if(payment.billTitle == null || payment.billTitle == " "){
+      alert("Bill Title is empty, please set a name to this payment")
+      return true      
+    }else if(this.isDuplicatedRegister(payment)){
+      alert("Bill already registred, please check bill title again")
+        return true
+    }else return false
 
   }
 
