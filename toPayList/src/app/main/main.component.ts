@@ -21,6 +21,7 @@ export class MainComponent implements OnInit {
   public addPayment(payment){
     if(this.isEmptyData(payment)){}
     else this.paymentList.push(payment)
+    debugger
   }
 
   public paidOut(paidOut){

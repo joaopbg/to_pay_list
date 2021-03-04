@@ -1,12 +1,37 @@
 .card-background{
     padding: 5px 5px 5px 5px;
-    display: grid;
-    grid-template-rows: auto;
+
+    border-radius: 2%;
+
+    /* display: grid;
+    grid-template-rows: auto; */
+
+    
+
+    width: 210px;
+
+    align-items: center;
+
+    background: linear-gradient(to top right, rgb(255, 255, 255), rgba(231, 231, 231, 0.466));
+    filter: brightness(110%)
 
 
 }
 
-#register-button{
+.register-button{
+    align-items: center;
+    font-size: 15px;
+    opacity: 0.7;
+    text-align: center;
     
 
 }
+
+.register-button:hover{
+    transition: 0.7s;
+    opacity: 1;
+    font-size: 27px;
+    
+
+}
+
