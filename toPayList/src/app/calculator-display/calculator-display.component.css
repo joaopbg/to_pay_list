@@ -1,0 +1,23 @@
+.display{
+    
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    
+
+    width: 90%;
+
+
+}
+
+.display-background{
+
+    background-color: rgba(0, 0, 0, 0.808);
+    text-align: right;
+    height: 35px;
+    
+    
+    
+    
+
+}

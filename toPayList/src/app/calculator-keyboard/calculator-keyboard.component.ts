@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , EventEmitter , Input , Output} from '@angular/core';
 
 @Component({
   selector: 'app-calculator-keyboard',
@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CalculatorKeyboardComponent implements OnInit {
 
+  @Output() buttonPressedEvent = new EventEmitter<string>()
+  @Input("values") values
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  public buttonPressed(value){
+    this.buttonPressedEvent.emit(value)
+
   }
 
 }

@@ -1,3 +1,2 @@
-<p>calculator works!</p>
-<app-calculator-display></app-calculator-display>
-<app-calculator-keyboard></app-calculator-keyboard>
+<app-calculator-display [display]="display"></app-calculator-display>
+<app-calculator-keyboard (buttonPressedEvent)="buttonPressed($event)" [values]="values"></app-calculator-keyboard>

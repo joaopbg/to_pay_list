@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-calculator-display',
@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CalculatorDisplayComponent implements OnInit {
 
+  @Input("display") display
+
+  
   constructor() { }
 
   ngOnInit(): void {
