@@ -11,13 +11,21 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainComponent } from './main/main.component';
 import { ToPayComponent } from './to-pay/to-pay.component';
 import { PaymentFormComponent } from './payment-form/payment-form.component';
+import { TotalValueComponent } from './total-value/total-value.component';
+import { CalculatorComponent } from './calculator/calculator.component';
+import { CalculatorDisplayComponent } from './calculator-display/calculator-display.component';
+import { CalculatorKeyboardComponent } from './calculator-keyboard/calculator-keyboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
     ToPayComponent,
-    PaymentFormComponent
+    PaymentFormComponent,
+    TotalValueComponent,
+    CalculatorComponent,
+    CalculatorDisplayComponent,
+    CalculatorKeyboardComponent
   ],
   imports: [
     BrowserModule,

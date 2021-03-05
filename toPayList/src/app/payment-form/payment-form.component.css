@@ -3,35 +3,38 @@
 
     border-radius: 2%;
 
-    /* display: grid;
-    grid-template-rows: auto; */
-
-    
+    display: grid;
+    grid-template-rows: auto;
 
     width: 210px;
 
     align-items: center;
 
     background: linear-gradient(to top right, rgb(255, 255, 255), rgba(231, 231, 231, 0.466));
-    filter: brightness(110%)
+    filter: brightness(110%);
 
 
 }
 
 .register-button{
     align-items: center;
-    font-size: 15px;
+    font-size: 35px;
     opacity: 0.7;
     text-align: center;
+    width: 65px;
+    height: 65px;
+    
     
 
 }
-
 .register-button:hover{
     transition: 0.7s;
     opacity: 1;
-    font-size: 27px;
+}
+#button-section{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
     
-
 }
 

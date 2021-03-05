@@ -12,6 +12,7 @@
     padding-left: 10px;
 
 
+
 }
 
 .container-header{
@@ -28,15 +29,41 @@
     display: grid;
     grid-template-columns: 20% 80%;
     padding: 5px 5px 5px 5px;
+    
 
 
 }
 
 .register-data{
     display: grid;
-    grid-template-columns: 25%;
+    grid-template-columns: auto;
+    
     
 
+}
+
+.total-value{
+    display: grid;
+    grid-template-columns: auto;
+
+
+}
+#calculator{
+
+    border: 5px;
+    border-radius: 2%;
+    padding: 5px 5px 5px 5px;
+    
+
+    background: linear-gradient(to top right, rgb(255, 255, 255), rgba(231, 231, 231, 0.466));
+    filter: brightness(110%);
+    width: 210px;
+
+    
+}
+
+#register-board{
+    padding-top: 30px;
 }
 
 
