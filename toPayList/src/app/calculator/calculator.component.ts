@@ -13,14 +13,18 @@ export class CalculatorComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  
-
   public data = []
   public operators = []
-
   public values = ["7","8","9","+","4","5","6","-","1","2","3","*","0","C","=","/"]
-
   public display: string = ""
+
+  //Object Literals
+  // public calculator = {
+  //   sum: function(value1, value2) {return value1 + value2},
+  //   sub: function(value1, value2) {return value1 - value2},
+  //   mult: function(value1, value2) {return value1 * value2},
+  //   div: function(value1, value2) {return value1/value2}
+  // }
 
 
   public buttonPressed(value){
@@ -45,9 +49,14 @@ export class CalculatorComponent implements OnInit {
     else if(value == "C"){
       this.cleanData()
       this.cleanDisplay()
-    }
-    
+    }    
     else this.organizeData(value)
+
+  }
+  private organizeData(value){
+    this.data.push(Number(this.display))
+    this.operators.push(value)
+    this.cleanDisplay()
 
   }
 
@@ -65,52 +74,7 @@ export class CalculatorComponent implements OnInit {
     this.operators = []
   }
 
-  public organizeData(value){
-    switch(value){
-      case "+":
-        this.sum()
-        break
-      case "-":
-        this.sub()
-        break
-      case "*":
-        this.mult()
-        break
-      case "/":
-        this.div()
-        break
-      default:
-        break
-    }
-    
 
-  }
-
-  private sum(){
-    this.data.push(Number(this.display))
-    this.operators.push("+")
-    this.cleanDisplay()
-  }
-
-  private sub(){
-    this.data.push(Number(this.display))
-    this.operators.push("-")
-    this.cleanDisplay()
-
-  }
-
-  private mult(){
-    this.data.push(Number(this.display))
-    this.operators.push("*")
-    this.cleanDisplay()
-
-  }
-  private div(){
-    this.data.push(Number(this.display))
-    this.operators.push("/")
-    this.cleanDisplay()
-
-  }
 
   private solve(){
     let cache = []
@@ -125,20 +89,19 @@ export class CalculatorComponent implements OnInit {
   }
 
   private calc(cache, operation){
-    let result: Number
     switch(operation){
       case "+":
         this.data[0] = cache[0]+cache[1]
         break
       case "-":
         this.data[0] = cache[0]-cache[1]
-      break
+        break
       case "*":
         this.data[0] = cache[0]*cache[1]
-      break
+        break
       case "/":
         this.data[0] = cache[0]/cache[1]
-      break
+        break
     }
 
   }
