@@ -1,10 +1,7 @@
-<div style="padding: 10px;">
+<div class="card-background">
     <mat-grid-list cols="4" rowHeight="45px">
-        <div>
-            <mat-grid-tile *ngFor="let value of values">
-                <button (click)="buttonPressed(value)" mat-raised-button color="primary">{{value}}</button>
-            </mat-grid-tile>
-        </div>
+        <mat-grid-tile *ngFor="let value of values">
+            <button (click)="buttonPressed(value)" mat-raised-button color="primary">{{value}}</button>
+        </mat-grid-tile>
     </mat-grid-list>
-    
 </div>

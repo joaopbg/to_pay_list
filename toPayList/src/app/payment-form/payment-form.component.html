@@ -1,14 +1,29 @@
 <div class="card-background">
-    <mat-label>Bill Tittle</mat-label>
-    <input placeholder="bill tittle" [(ngModel)]="billTitle"><br>
-    <mat-label>Value</mat-label>
-    <input type="number" placeholder="value" [(ngModel)]="value"><br>
-    <mat-label>Due Date</mat-label>
-    <input type="date" placeholder="Due Date" [(ngModel)]="dueDate">
-    <div id="button-section">
-        <button mat-fab color="primary" class="register-button" (click)="addPayment()"><span id="plus-button">+</span></button>
+
+    <div class="box-1">
+        <div class="input-style">
+            <div class="label">Bill Tittle</div>
+            <input style="width: 80%;" placeholder="Ex. Credit Card" [(ngModel)]="billTitle">
+        </div>
+        <div class="input-style">
+            <div class="label">Value</div>
+            <input style="width: 80%;" type="number" placeholder="Ex. 326.15" [(ngModel)]="value">
+        </div>
+        <div class="input-style">
+            <div class="label">Due Date</div>
+            <input style="width: 80%;" type="date" placeholder="Due Date" [(ngModel)]="dueDate">
+        </div>
+        
     </div>
-    
-</div>
+
+    <div class="box-2">
+        <div class="plus-button">
+            <button mat-fab color="primary" (click)="addPayment()">
+                <span style="font-size: 35px;">+</span>
+            </button>
+        </div>
+    </div>
+
+</div> 
 
 

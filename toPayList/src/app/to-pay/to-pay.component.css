@@ -1,34 +1,28 @@
 .card-background{
-    position: relative;
-
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-
-    border: 5px;
+    display: flex;
+    flex-wrap:wrap;
+    /* display: grid;
+    grid-template-columns: 33% 33% 33%; */
     border-radius: 2%;
-    padding:9px 9px 9px 9px;
-
-    width: auto;
-    height: 615px;
-
-    /* background: rgba(255, 255, 255, 0.555); */
-    background: linear-gradient(to top right, rgb(255, 255, 255), rgba(231, 231, 231, 0.466));
-    filter: brightness(110%)
-    
+    padding:15px;
+    height: auto;
 }
 
 .bill-card{
-    border: 3px;
     border-radius: 2%;
     background: linear-gradient(rgba(195, 0, 255, 0.589), rgba(192, 174, 174, 0.466));
-    padding: 5px 5px 5px 5px;
-    opacity: 0.8;
+    padding: 10px;
+    opacity: 0.9;
+    width: 175px;
+    height: 75px;
+    
+    
 }
 
 .bill-card:hover{
-    transition: 0.2s;
     opacity: 1;
     transform: scale(1.01);
     background: rgba(195, 0, 255, 0.904);
+    transition: 0.2s;
 
 }

@@ -1,23 +1,33 @@
-<div class="container">
-    <div class="container-header">
-        <!-- <h1>To Pay List</h1> -->
-    </div>
+<div>
+    <!-- <div class="header">
+        <h2>To Pay List</h2>
+        <div class="navbar">
+            <ul>
+                <li>About</li>
+            </ul>
+        </div>
+    </div> --> 
 
-    <div class="container-content">
-        <div class="register-data">
-            <div id="calculator">
-                <app-calculator></app-calculator>
+    <div class="main-background">
+        <section class="side-section">
+            <div>
+                <div class="side-component">
+                    <app-calculator></app-calculator>
+                </div>
+                <div class="side-component">
+                    <app-payment-form (buttonRegisterPressed)="addPayment($event)"></app-payment-form>
+                </div>
+                <div class="side-component">
+                    <app-total-value [totalValue]="totalValue" [paymentList]="paymentList"></app-total-value>
+                </div>
             </div>
-            <div id="register-board">
-                <app-payment-form (buttonRegisterPressed)="addPayment($event)"></app-payment-form>
+        </section>
+        <section class="main-section">
+            <div>
+                <app-to-pay [paymentList]="paymentList" (buttonPaidoutPressed)="paidOut($event)"></app-to-pay>
             </div>
-            <div class="total-value">
-                <app-total-value [totalValue]="totalValue" [paymentList]="paymentList"></app-total-value>
-            </div>
-        </div>
-        <div>
-            <app-to-pay [paymentList]="paymentList" (buttonPaidoutPressed)="paidOut($event)"></app-to-pay>
-        </div>
+        </section>
+        
     </div>
 </div>
 

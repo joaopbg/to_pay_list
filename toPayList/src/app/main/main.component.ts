@@ -12,6 +12,7 @@ export class MainComponent implements OnInit {
 
   ngOnInit(): void {
     this.getTotalValue()
+    console.log(this.d.getMonth());
   }
 
   public paymentList = [{
@@ -21,6 +22,10 @@ export class MainComponent implements OnInit {
   }]
 
   public totalValue: number = 0
+  public d = new Date()
+
+  
+  
 
   public addPayment(payment){
     if(this.isEmptyData(payment)){}
