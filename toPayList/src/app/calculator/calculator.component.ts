@@ -28,13 +28,10 @@ export class CalculatorComponent implements OnInit {
 
 
   public buttonPressed(value){
-    if(this.isNumber(value)){
-      this.display = this.display + value
-    }else{
-      this.operation(value)
-    }
+    if(this.isNumber(value))this.display = this.display + value
+    else this.operation(value)
   }
-
+  
   public isNumber(value){
     let number = ["1","2","3","4","5","6","7","8","9","0"]
     if(number.includes(value)) return true
@@ -60,7 +57,7 @@ export class CalculatorComponent implements OnInit {
 
   }
 
-  public getResult(){
+  private getResult(){
     this.solve()
     this.cleanData()
   }
@@ -73,8 +70,6 @@ export class CalculatorComponent implements OnInit {
     this.data = []
     this.operators = []
   }
-
-
 
   private solve(){
     let cache = []
